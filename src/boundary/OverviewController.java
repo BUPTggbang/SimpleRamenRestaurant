@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OverviewController implements Initializable {
-	private Customer customer = new Customer(1);
+	private Customer customer;
 
 	@FXML
 	private Pane pnlOverview;
@@ -29,6 +29,11 @@ public class OverviewController implements Initializable {
 
 	@FXML
 	private VBox pnItems;
+	
+	//传参进这个面板来
+	public OverviewController(Customer cus){
+		this.customer=cus;
+	}
 
 
 	@Override
@@ -62,7 +67,6 @@ public class OverviewController implements Initializable {
 				name.setText("" + customer.getOrderList().getArraylist().get(i).getCode());
 				time.setText("" + customer.getOrderList().getArraylist().get(i).getGenerateTime());
 
-				//give the items some effect
 				nodes[i].setOnMouseEntered(event -> {
 					nodes[j].setStyle("-fx-background-color : #0A0E3F");
 				});
