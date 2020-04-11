@@ -2,6 +2,8 @@ package boundary;
 
 import control.Customer;
 import control.SaveRestInfo;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,7 +21,10 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import entities.*;
 
 public class Controller implements Initializable {
     private Customer customer = new Customer(1);
