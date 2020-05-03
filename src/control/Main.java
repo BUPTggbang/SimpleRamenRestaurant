@@ -45,4 +45,15 @@ public class Main extends Application {
         launch(args);
 
     }
+    
+    @Override
+    public void stop(){
+        // Save rsetaurant infomation 
+        // 在修改的过程中已经保存
+
+        // Sava manager information
+        // 还没有manager information？
+        
+        // Logout all managers
+    }
 }
