@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.geometry.*?>
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane fx:id="Restpln" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="Restpln" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button id="OK" layoutX="519.0" layoutY="479.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
+      <Button fx:id="btnOK" layoutX="510.0" layoutY="475.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" stylesheets="@style.css" text="OK">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
-         <effect>
-            <InnerShadow blurType="ONE_PASS_BOX" color="#4c4c51" height="27.42" radius="13.4375" width="28.33" />
-         </effect>
+
       </Button>
-      <Button cancelButton="true" layoutX="208.0" layoutY="478.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
+      <Button fx:id="btnCancel" cancelButton="true" layoutX="250.0" layoutY="475.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" stylesheets="@style.css" text="Cancel">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
-         <effect>
-            <InnerShadow blurType="ONE_PASS_BOX" color="#4c4c51" height="24.67" radius="12.75" width="28.33" />
-         </effect>
+
       </Button>
-      <Label layoutX="57.0" layoutY="25.0" text="Restaurant Information" textFill="#e7e5e5">
+      <Label layoutX="57.0" layoutY="35.0" text="Restaurant Information" textFill="#e7e5e5">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER_RIGHT" hgap="5.0" layoutX="150.0" layoutY="100.0" minHeight="330.0" prefHeight="330.0" prefWidth="550.0" style="-fx-background-color: #02030A;" vgap="5.0">
+      <GridPane alignment="CENTER_RIGHT" hgap="5.0" layoutX="150.0" layoutY="100.0" minHeight="330.0" prefHeight="330.0" prefWidth="550.0" style="-fx-background-color: #02030A;" stylesheets="@style.css" vgap="5.0">
          <children>
             <Label text="Restaurant Name:" textFill="#b7c3d7">
                <font>
@@ -55,13 +51,13 @@
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <TextField id="RestName" fx:id="RestNameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" GridPane.columnIndex="1" />
+            <TextField fx:id="RestNameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="Test Reman Shop" GridPane.columnIndex="1" />
             <TextField fx:id="AddressField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="No.10, Xitucheng Road" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="100083" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="ResgDateField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: 212D4F;" text="2020.3.29" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ScrollPane id="RestIntro" opacity="0.9" prefHeight="110.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <ScrollPane opacity="0.9" prefHeight="110.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <content>
-                  <TextArea opacity="0.9" prefHeight="200.0" prefWidth="335.0" wrapText="true" />
+                  <TextArea opacity="0.9" prefHeight="200.0" prefWidth="335.0" text="Welcome to our new ramen shop." wrapText="true" />
                </content>
             </ScrollPane>
          </children>

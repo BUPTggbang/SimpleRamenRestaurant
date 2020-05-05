@@ -1,4 +1,4 @@
-package boundary;
+package home;
 
 public class RestaurantController {
 }
